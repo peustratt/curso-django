@@ -9,3 +9,4 @@ Aplicação disponível em https://pythonprodjango-peustratt.herokuapp.com/
 [![Build Status](https://travis-ci.com/peustratt/curso-django.svg?branch=main)](https://travis-ci.com/peustratt/curso-django)
 [![Updates](https://pyup.io/repos/github/peustratt/curso-django/shield.svg)](https://pyup.io/repos/github/peustratt/curso-django/)
 [![Python 3](https://pyup.io/repos/github/peustratt/curso-django/python-3-shield.svg)](https://pyup.io/repos/github/peustratt/curso-django/)
+[![codecov](https://codecov.io/gh/peustratt/curso-django/branch/main/graph/badge.svg?token=OXCVRE3UX2)](https://codecov.io/gh/peustratt/curso-django)
