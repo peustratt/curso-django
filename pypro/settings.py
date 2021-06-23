@@ -149,6 +149,7 @@ AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 # ----------------------------------------------
 
 if AWS_ACCESS_KEY_ID:  # pragma: no cover
+    COLLECTFAST_ENABLED = True
     AWS_SECRET_ACCESS_KEY = config('AWS_SECRET_ACCESS_KEY')
     AWS_STORAGE_BUCKET_NAME = config('AWS_STORAGE_BUCKET_NAME')
     AWS_S3_OBJECT_PARAMETERS = {'CacheControl': 'max-age=86400', }
@@ -157,19 +158,18 @@ if AWS_ACCESS_KEY_ID:  # pragma: no cover
     AWS_QUERYSTRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
 
-    COLLECTFAST_ENABLED = True
-    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
     COLLECTFAST_STRATEGY = "collectfast.strategies.boto3.Boto3Strategy"
 
     AWS_DEFAULT_ACL = 'private'
 
     # Static Assets
     # -------------------------------------------------------
-    STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+    # STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
+    STATICFILES_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'/{STATIC_S3_PATH}/'
     STATIC_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}/'
-    ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin'
+    ADMIN_MEDIA_PREFIX = STATIC_URL + 'admin/'
 
     # Upload Media Folder
     DEFAULT_FILE_STORAGE = 's3_folder_storage.s3.DefaultStorage'
