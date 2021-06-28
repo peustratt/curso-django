@@ -18,19 +18,10 @@ from django.conf import settings
 from django.contrib import admin
 from django.urls import path, include
 
-from pypro.base.views import home
-
-app_name = 'base'
-
-
-def trigger_error(request):
-    raise ValueError
-
 
 urlpatterns = [
-    path('', home, name='home'),
     path('admin/', admin.site.urls),
-    path('sentry-debug/', trigger_error),
+    path('', include('pypro.base.urls')),
 ]
 
 if settings.DEBUG:
