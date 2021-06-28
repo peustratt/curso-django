@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Java Pro</title>
+
+    <meta name="description" content="Página do curso Java Pro">
+    <meta name="author" content="Pedro Ivo">
+    <link rel="icon" type="image/png" href="{% static 'img/favicon.png' %}">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/scripts.js'%}"></script>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'base:home' %}">Java Pro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+	<div class="row">
+		<div class="col-md-12">
+
+			<div class="jumbotron">
+				<h2>
+					Curso de Java com Yan Felix
+				</h2>
+				<p>
+					Confira em breve mais informações sobre o curso que será ministrado pelo autor do melhor github
+                    <a href="https://github.com/yanofelix" target="_blank" >Github Bozex</a>
+				</p>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="card">
+						<h5 class="card-header">
+							Mais detalhes sobre o instrutor
+						</h5>
+						<div class="card-body">
+							<p class="card-text">
+								<img src="{% static 'img/yan-felix.png' %}" alt="Foto de Yan Felix"
+                                     class="img-thumbnail float-start me-3"/>
+                                Felix é autodidata manjador dos frameworks web e REST API, seu primeiro contato com a
+                                programação vem desde cedo, por curiosidade desenvolveu jogos como flappy bird, seu
+                                próximo projeto é um site de rifas.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+  <footer class="main-footer mt-5 pt-4 text-light">
+      <div class="container">
+          <div class="row">
+              <div class="col">
+                  <h3>Entre em Contato</h3>
+                  <address>
+                      +55 (81) 99789-2535
+                      <br/>
+                      <a href="mailto:yanfelix@email.com" class="text-light">yanfelix@email.com</a>
+                  </address>
+              </div>
+          </div>
+      </div>
+      <div class="rights pb-4">
+          <div class="container">
+              <div class="row">
+                  <div class="col">
+                      {% now 'Y' %} Java Pro. Todos direitos reservados
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </footer>
+  </body>
+</html>
